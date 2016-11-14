@@ -36,7 +36,7 @@
             };
         },
 
-        ready: function(){
+        mounted: function(){
             this.fetchTaskList();
         },
 
@@ -66,8 +66,8 @@
                     this.task.id = response.data.id
                     this.task.body = response.data.body
                 })
-                this.$els.taskinput.focus()
                 this.edit = true
+                this.$refs.taskinput.focus()
             },
 
             deleteTask: function(id){
